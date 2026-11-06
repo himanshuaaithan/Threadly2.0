@@ -1,0 +1,107 @@
+:root {
+    --bg: #000;
+    --side: #0c0c0e;
+    --card: #1c1c1e;
+    --card2: #2c2c2e;
+    --line: #2a2a2d;
+    --text: #f5f5f7;
+    --mute: #8e8e93;
+    --blue: #0a84ff;
+    --pill: #2c2c2e;
+    --r: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.products {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    background-color: var(--bg);
+    color: var(--text)
+}
+
+.allProducts {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.product {
+    height: 400px;
+    width: 300px;
+    background-color: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imageBox {
+    height: 320px;
+    width: 300px;
+}
+
+.imageBox img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.productBottom {
+    display: flex;
+    height: 80px;
+    width: 100%;
+}
+
+.productBottomRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.productBottomRight h1 {
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+.productBottomRight p {
+    font-size: x-small;
+    font-weight: 300;
+    font-family: sans-serif;
+    margin-left: 10px;
+    color: var(--mute);
+}
+
+.ProductBottomLeft {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProductBottomLeft button{
+    height: 20px;
+    color: var(--blue);
+    background: var(--card2);
+    border: none;
+    padding: 15px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 700;
+}
