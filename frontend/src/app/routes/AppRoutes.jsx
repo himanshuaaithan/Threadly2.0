@@ -1,6 +1,27 @@
-import { createBrowserRouter } from "react-router";
-import CreateProducts from "../../features/product/pages/createProducts";
+import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import Products from '../../features/product/pages/Products'
+import CreateProducts from '../../features/product/pages/createProducts'
+import MainLayout from '../layout/mainLayout'
 
-export const AppRouter = createBrowserRouter([
-    { path: '/create/product', element: <CreateProducts /> }
-])
+const AppRoutes = () => {
+    const router = createBrowserRouter([
+        {
+            path: '/home',
+            element:<MainLayout/>,
+            children: [
+                {
+                    path: '',
+                    element: <Products />
+                },
+                {
+                    path: 'create/product',
+                    element: <CreateProducts />
+                }
+            ]
+        }
+    ])
+    return <RouterProvider router={router} />
+}
+
+export default AppRoutes

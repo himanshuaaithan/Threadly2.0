@@ -27,7 +27,8 @@ html {
     width: 100vw;
     display: flex;
     background-color: var(--bg);
-    color: var(--text)
+    color: var(--text);
+    overflow-y: scroll;
 }
 
 .allProducts {
